@@ -1,0 +1,10 @@
+
+/* styles.css - base ligera + dark mode */
+:root{
+  --brand:#2563eb;
+}
+body{ background:#ffffff; }
+@media (prefers-color-scheme: dark){
+  body{ background:#0b0d12; color:#e5e7eb; }
+  .card{ background:#ffffff; border-color:#ebeef1; }
+}

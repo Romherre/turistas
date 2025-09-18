@@ -10,3 +10,21 @@
 .qr{ max-width: 220px; }
 .btn-link{ text-decoration:none; }
 .select-lg{ font-size:1.1rem; }
+
+/* Limitar ancho total del deck para poder centrarlo bonito */
+#screen-have-sim .qr-row {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Que cada card no se estire demasiado y quede centrada */
+.qr-card {
+  max-width: 360px;
+}
+
+/* Tamaño razonable del QR dentro de la card */
+img.qr {
+  max-width: 260px;
+  width: 100%;
+}

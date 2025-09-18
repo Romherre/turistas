@@ -45,12 +45,14 @@
               id="btn-have-sim"
               class="kiosk-card btn btn-outline-primary w-100 p-4"
             >
-              <div class="fs-2">📶</div>
+              <div class="fs-2"></div>
               <div class="fw-bold fs-5 mt-2" data-i18n="have_sim">
                 Ya tengo SIM
               </div>
               <div class="text-muted" data-i18n="have_sim_desc">
                 Accesos rápidos (Wi‑Fi, activación, recarga)
+                <br>
+                <br>
               </div>
             </button>
           </div>
@@ -59,7 +61,7 @@
               id="btn-no-sim"
               class="kiosk-card btn btn-outline-secondary w-100 p-4"
             >
-              <div class="fs-2">💳</div>
+              <div class="fs-2"></div>
               <div class="fw-bold fs-5 mt-2" data-i18n="no_sim">
                 No tengo SIM
               </div>
@@ -79,11 +81,13 @@
             ← Volver
           </button>
         </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 text-center p-3 shadow-sm">
+
+        <!-- centrado horizontal + responsive -->
+        <div class="row g-4 justify-content-center qr-row">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center p-3 shadow-sm mx-auto qr-card">
               <div class="fs-2">📡</div>
-              <h3 class="h5 mt-2" data-i18n="wifi">Conexión a Wi‑Fi</h3>
+              <h3 class="h5 mt-2" data-i18n="wifi">Conexión a Wi-Fi</h3>
               <img
                 class="qr img-fluid mx-auto my-2"
                 src="assets/img/wific.png"
@@ -94,8 +98,9 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 text-center p-3 shadow-sm">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center p-3 shadow-sm mx-auto qr-card">
               <div class="fs-2">🪪</div>
               <h3 class="h5 mt-2" data-i18n="activation">
                 Activación de línea
@@ -110,9 +115,9 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 text-center p-3 shadow-sm">
-              <div class="fs-2">💳</div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 text-center p-3 shadow-sm mx-auto qr-card">
               <h3 class="h5 mt-2" data-i18n="topup">Recarga</h3>
               <img
                 class="qr img-fluid mx-auto my-2"
@@ -157,8 +162,10 @@
                     <span data-i18n="sim_time">Duración</span>:
                     <strong id="plan-time">30 días</strong>
                   </li>
-                <li><span data-i18n="sim_type">Tipo de SIM</span>:
-                  <strong>Física o eSIM</strong></li>
+                  <li>
+                    <span data-i18n="sim_type">Tipo de SIM</span>:
+                    <strong>Física o eSIM</strong>
+                  </li>
                 </ul>
 
                 <!-- Requisitos -->

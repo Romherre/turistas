@@ -1,15 +1,97 @@
-
 /* kiosk.css - énfasis en uso táctil (tablet) */
-.kiosk-container{ max-width: 1100px; }
-.kiosk-card{
-  border:2px dashed #ffffff;
-  border-radius:1rem;
-  background:#fff;
+
+/* Fondo y tipografía base */
+
+  body {
+  background-color: #b80b25; /* granate */
+  color: #1a1919;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh; /* ocupar todo el alto */
 }
-.kiosk-card:hover{ transform:translateY(-1px); }
-.qr{ max-width: 220px; }
-.btn-link{ text-decoration:none; }
-.select-lg{ font-size:1.1rem; }
+
+
+
+/* Encabezados */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: #f1ebeb;
+}
+
+/* --- Cards (bienvenida, QR y productos) --- */
+.kiosk-card,
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;                          /* borde sutil */
+  border-radius: 16px;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.08),                   /* sombra principal */
+    0 2px  4px rgba(0, 0, 0, 0.06);                   /* sombra cercana */
+  transition: box-shadow .2s ease, transform .15s ease;
+}
+
+.kiosk-card:hover,
+.card:hover {
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.12),                  /* más elevación al hover */
+    0  4px  8px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Estados de foco accesibles */
+.kiosk-card:focus,
+.kiosk-card:focus-visible,
+.card:focus,
+.card:focus-visible {
+  outline: 0;
+  box-shadow:
+    0 0 0 3px rgba(230, 0, 0, 0.25),                  /* anillo rojo Claro */
+    0 10px 22px rgba(0, 0, 0, 0.12),
+    0  2px  6px rgba(0, 0, 0, 0.06);
+}
+
+/* Variante “neutra” para el botón derecho de bienvenida */
+.btn-outline-secondary.kiosk-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #080808; /* gris oscuro */
+}
+
+/* Acento de subtítulos bajo los títulos dentro de cards */
+.card .text-muted { color: #6b7280 !important; }
+
+/* Botones principales */
+.btn-primary {
+  background-color: #e60000; /* Rojo Claro */
+  border-color: #e60000;
+}
+.btn-primary:hover {
+  background-color: #c20000;
+  border-color: #c20000;
+}
+
+/* Contenedor general */
+.kiosk-container {
+  max-width: 1100px;
+}
+
+/* QRs */
+.qr {
+  max-width: 220px;
+}
+img.qr {
+  max-width: 260px;
+  width: 100%;
+}
+
+/* Botón de volver */
+.btn-link {
+  text-decoration: none;
+}
+
+/* Select idioma */
+.select-lg {
+  font-size: 1.1rem;
+}
 
 /* Limitar ancho total del deck para poder centrarlo bonito */
 #screen-have-sim .qr-row {
@@ -21,10 +103,28 @@
 /* Que cada card no se estire demasiado y quede centrada */
 .qr-card {
   max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Tamaño razonable del QR dentro de la card */
-img.qr {
-  max-width: 260px;
-  width: 100%;
+/* --- AJUSTE DE ESPACIADO BIENVENIDA --- */
+#screen-welcome {
+  padding-top: 80px; /* podés subir a 100px si lo querés más abajo */
+}
+
+@media (min-width: 992px) {
+  #screen-welcome {
+    padding-top: 100px;
+  }
+}
+
+
+.lead {
+  color: #ffffff !important;
+}
+
+/* Texto "Idioma" al lado del selector */
+label span[data-i18n="language"] {
+  color: #ffffff !important;
+  font-weight: 500; /* opcional, para que quede más nítido */
 }

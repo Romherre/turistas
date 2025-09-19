@@ -1,10 +1,71 @@
-
-/* styles.css - base ligera + dark mode */
+/* styles.css — base institucional (Claro-like) */
 :root{
-  --brand:#2563eb;
+  --brand: #e60000; /* Rojo Claro */
+  --bg:    #ffffff;
+  --text:  #222222;
+  --muted: #6b7280;
 }
-body{ background:#ffffff; }
-@media (prefers-color-scheme: dark){
-  body{ background:#0b0d12; color:#e5e7eb; }
-  .card{ background:#ffffff; border-color:#ebeef1; }
+
+/* Fondo blanco siempre (sin modo oscuro automático) */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Cards genéricas */
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+/* Texto secundario */
+.text-muted { color: var(--muted) !important; }
+
+/* Botones */
+.btn-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+.btn-primary:hover {
+  background-color: #c20000;
+  border-color: #c20000;
+}
+
+/* Outline primary con rojo de marca */
+.btn-outline-primary {
+  color: var(--brand);
+  border-color: var(--brand);
+  background: #fff;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+/* Outline secondary gris */
+.btn-outline-secondary {
+  color: #080808;
+  border-color: #cfd4da;
+  background: #fff;
+}
+.btn-outline-secondary:hover {
+  color: #111827;
+  background-color: #f3f4f6;
+  border-color: #cfd4da;
+}
+
+/* Links con color de marca (por si se usan) */
+a { color: var(--brand); }
+a:hover { color: #c20000; }

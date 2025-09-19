@@ -1,7 +1,7 @@
 // kiosk.js - control de pantallas + idiomas + inactividad
-// Versión: 2025-09-14_02
+// Versión: 2025-09-14_03
 (function () {
-  console.log("kiosk.js versión 2025-09-14_02 cargado");
+  console.log("kiosk.js versión 2025-09-14_03 cargado");
 
   const screens = {
     welcome: document.querySelector("#screen-welcome"),
@@ -18,19 +18,19 @@
       have_sim: "Ya tengo SIM",
       have_sim_desc: "Accesos rápidos (Wi-Fi, activación, recarga)",
       no_sim: "No tengo SIM",
-      no_sim_desc: "Ver pack, GB, duración y productos",      // ← actualizado
+      no_sim_desc: "Ver pack, GB, duración y productos",
       quick_actions: "Accesos rápidos",
       wifi: "Conexión a Wi-Fi",
       activation: "Activación de línea",
       topup: "Recarga / Top-up",
       qr_note: "Escaneá con la cámara para abrir el enlace",
       back: "← Volver",
-      no_sim_title: "Simcard turista",                        // ← actualizado
-      featured_plan: "Único pack disponible",                 // ← actualizado
+      no_sim_title: "Simcard turista",
+      featured_plan: "Único pack disponible",
       sim_price: "Valor SIM",
       sim_gb: "Datos",
       sim_time: "Duración",
-      sim_type: "Tipo de SIM",                                // ← NUEVA clave
+      sim_type: "Tipo de SIM",
       get_sim: "Quiero esta SIM",
       products_title: "Productos útiles",
       prod_powerbank: "Power Bank",
@@ -39,6 +39,12 @@
       prod_charger_desc: "Compatibilidad universal y protección.",
       prod_anti: "Correa antirrobo",
       prod_anti_desc: "Más seguridad para tus dispositivos.",
+      // 🆕 Requisitos
+      req_title: "Requisitos para la compra:",
+      req_passport: "Pasaporte físico válido",
+      req_pay_credit_only: "Pago únicamente con",
+      req_credit_card: "tarjeta de crédito",
+      req_no_debit_cash: "No se acepta débito ni efectivo",
     },
     en: {
       welcome: "Welcome",
@@ -47,19 +53,19 @@
       have_sim: "I have a SIM",
       have_sim_desc: "Quick actions (Wi-Fi, activation, top-up)",
       no_sim: "I don't have a SIM",
-      no_sim_desc: "See pack, data, duration and products",   // ← match ES wording
+      no_sim_desc: "See pack, data, duration and products",
       quick_actions: "Quick actions",
       wifi: "Wi-Fi connection",
       activation: "Line activation",
       topup: "Top-up / Recharge",
       qr_note: "Point your camera at the QR to open the link",
       back: "← Back",
-      no_sim_title: "Tourist SIM card",                       // ← match ES wording
+      no_sim_title: "Tourist SIM card",
       featured_plan: "Single available pack",
       sim_price: "SIM price",
       sim_gb: "Data",
       sim_time: "Duration",
-      sim_type: "SIM type",                                   // ← NEW key
+      sim_type: "SIM type",
       get_sim: "I want this SIM",
       products_title: "Useful products",
       prod_powerbank: "Power Bank",
@@ -68,6 +74,12 @@
       prod_charger_desc: "Universal compatibility and protection.",
       prod_anti: "Anti-theft strap",
       prod_anti_desc: "More security for your devices.",
+      // 🆕 Requirements
+      req_title: "Requirements for purchase:",
+      req_passport: "Valid physical passport",
+      req_pay_credit_only: "Payment only with",
+      req_credit_card: "credit card",
+      req_no_debit_cash: "Debit cards or cash are not accepted",
     },
     pt: {
       welcome: "Bem-vindos",
@@ -76,19 +88,19 @@
       have_sim: "Já tenho SIM",
       have_sim_desc: "Ações rápidas (Wi-Fi, ativação, recarga)",
       no_sim: "Não tenho SIM",
-      no_sim_desc: "Ver pacote, GB, duração e produtos",      // ← match ES wording
+      no_sim_desc: "Ver pacote, GB, duração e produtos",
       quick_actions: "Ações rápidas",
       wifi: "Conexão Wi-Fi",
       activation: "Ativação da linha",
       topup: "Recarga",
       qr_note: "Aponte a câmera para o QR para abrir o link",
       back: "← Voltar",
-      no_sim_title: "SIM para turista",                       // ← match ES wording
+      no_sim_title: "SIM para turista",
       featured_plan: "Pacote único disponível",
       sim_price: "Valor do SIM",
       sim_gb: "Dados",
       sim_time: "Duração",
-      sim_type: "Tipo de SIM",                                // ← NOVA chave
+      sim_type: "Tipo de SIM",
       get_sim: "Quero este SIM",
       products_title: "Produtos úteis",
       prod_powerbank: "Power Bank",
@@ -97,6 +109,12 @@
       prod_charger_desc: "Compatibilidade universal e proteção.",
       prod_anti: "Correia anti-furto",
       prod_anti_desc: "Mais segurança para seus dispositivos.",
+      // 🆕 Requisitos
+      req_title: "Requisitos para a compra:",
+      req_passport: "Passaporte físico válido",
+      req_pay_credit_only: "Pagamento somente com",
+      req_credit_card: "cartão de crédito",
+      req_no_debit_cash: "Não se aceita débito nem dinheiro",
     },
   };
 

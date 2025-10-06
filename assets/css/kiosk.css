@@ -20,8 +20,8 @@ h1, h2, h3, h4, h5 {
 /* --- Cards (bienvenida, QR y productos) --- */
 .kiosk-card,
 .card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;                          /* borde sutil */
+  border: 2px solid #e60000; /* borde rojo institucional */
+  background: #ffffff;                        /* borde sutil */
   border-radius: 16px;
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.08),                   /* sombra principal */
@@ -54,6 +54,7 @@ h1, h2, h3, h4, h5 {
   background: #ffffff;
   border-color: #e5e7eb;
   color: #080808; /* gris oscuro */
+  border: 2px solid #e60000; /* borde rojo institucional */
 }
 
 /* Acento de subtítulos bajo los títulos dentro de cards */
@@ -141,3 +142,105 @@ label span[data-i18n="language"] {
 .scenario-filter { border-radius: 999px; }
 .modal-content { border-radius: 12px; }
 .modal-body ul { list-style: disc; margin-left: 1.5rem; }
+
+
+/* ===========================================================
+   OVERRIDES – Estética Claro minimal + HERO banner
+   (colocar al FINAL de kiosk.css)
+   =========================================================== */
+
+/* 1) Variable para el gris MUY suave del degradado */
+:root{
+  --bg-gray-soft: #f2f2f5;
+}
+
+/* 2) Base visual: fondo blanco, textos oscuros (pisamos el granate) */
+body{
+  background: var(--bg) !important;   /* var(--bg) = #ffffff de styles.css */
+  color: var(--text) !important;       /* var(--text) = #222 de styles.css */
+}
+
+/* 3) Encabezados oscuros (pisamos el blanco de kiosk.css) */
+h1, h2, h3, h4, h5{
+  color: #000 !important;
+}
+
+/* 4) Texto de "lead" y etiqueta "Idioma" en tono oscuro */
+.lead{
+  color: #444 !important;
+}
+label span[data-i18n="language"]{
+  color: #111 !important;
+}
+
+/* 5) HERO – Degradado horizontal blanco -> gris muy suave + línea roja */
+header.hero{
+  min-height: 56vh;
+  background: linear-gradient(90deg, var(--bg) 0%, var(--bg-gray-soft) 100%);
+  border-bottom: 4px solid var(--brand); /* Rojo Claro */
+  display: flex;
+  align-items: center;
+}
+
+/* 6) Imagen del banner: contenida (no recorta), con aire si falta */
+header.hero .hero-img{
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+/* 7) Responsivo: un poco más compacto en pantallas chicas */
+@media (max-width: 992px){
+  header.hero{ min-height: 48vh; }
+}
+@media (max-width: 576px){
+  header.hero{ min-height: 42vh; }
+}
+
+/* --- FIX: quitar línea roja del banner --- */
+.hero,
+header.hero{
+  border-bottom: 0 !important;  /* elimina la línea roja */
+  box-shadow: none !important;  /* por si había alguna sombra de borde */
+}
+
+/* --- FIX: compactar espacio entre banner y el título --- */
+/* el <section id="screen-welcome"> tiene "mt-5" (margen grande) */
+#screen-welcome{
+  margin-top: 0 !important;     /* anula el mt-5 de Bootstrap */
+  padding-top: 16px !important; /* deja un aire mínimo y prolijo */
+}
+
+/* si querés todavía menos aire, bajá a 8px */
+@media (max-width: 992px){
+  #screen-welcome{ padding-top: 12px !important; }
+}
+
+
+/* que el hero no obligue altura grande */
+header.hero{
+  min-height: auto !important;     /* antes: 56vh */
+  padding-top: 16px !important;     /* aire mínimo arriba */
+  padding-bottom: 8px !important;   /* aire mínimo abajo */
+}
+
+/* mantener tu imagen al 40% y sin margen extra */
+header.hero .hero-img{
+  width: 40% !important;
+  margin-bottom: 0 !important;
+}
+
+/* el section de bienvenida sin márgenes/paddings altos */
+#screen-welcome{
+  margin-top: 0 !important;       /* anula mt-5 si quedó en el HTML */
+  padding-top: 8px !important;    /* separa apenas del banner */
+}
+
+/* si querés aún menos aire en móviles */
+@media (max-width: 992px){
+  header.hero{ padding-top: 12px !important; padding-bottom: 6px !important; }
+  #screen-welcome{ padding-top: 6px !important; }
+}

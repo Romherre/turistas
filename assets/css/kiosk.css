@@ -244,3 +244,21 @@ header.hero .hero-img{
   header.hero{ padding-top: 12px !important; padding-bottom: 6px !important; }
   #screen-welcome{ padding-top: 6px !important; }
 }
+
+
+header.hero {
+  background: linear-gradient(90deg, #fff 0%, #f2f2f5 100%);
+  padding: 12px 0;
+}
+
+.hero-img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  margin: 0 auto;
+}
+
+

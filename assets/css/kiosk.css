@@ -261,4 +261,11 @@ header.hero {
   margin: 0 auto;
 }
 
+/* Ponelo al final de kiosk.css */
+.lang-btn.btn-primary {
+  border-color: #e60000;
+  background-color: #e60000;
+}
+
+
 

@@ -30,5 +30,5 @@ Incluye modo kiosco con auto‑reset a bienvenida tras 45s de inactividad.
 ## Contacto
 
 - **Nombre:** Romina Herrera
-- **Correo electrónico:** romina-herrera@hotmail.com
+- **Correo electrónico:** herrera.romina.tamara@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/romina-herreramicv/
